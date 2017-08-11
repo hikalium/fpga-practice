@@ -1,10 +1,10 @@
-SRCS=top.v beep.v led7seg.v
+SRCS=beep.v led7seg.v rmchat.v top.v
 TOPMODULE=top
 
 DIR_QBIN=~/intelFPGA_lite/17.0/quartus/bin
 
 default:
-	$(DIR_QBIN)/quartus_map top --part=EP4CE6E22C8 --source=top.v
+	$(DIR_QBIN)/quartus_map top
 	$(DIR_QBIN)/quartus_fit top
 	$(DIR_QBIN)/quartus_asm top
 
@@ -25,3 +25,13 @@ install:
 resetpgm:
 	-killall jtagd
 	sudo $(DIR_QBIN)/jtagd
+
+clean:
+	-rm -r db/ incremental_db/
+	-rm *.rpt
+	-rm *.jdi
+	-rm *.summary
+	-rm *.pin
+	-rm *.out
+	-rm *.sld
+	-rm *.sof

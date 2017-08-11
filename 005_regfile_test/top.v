@@ -9,19 +9,18 @@ output beep;
 output [7:0] seg;
 output [3:0] segsel;
 //
-wire [3:0] btn = ~nbtn;
+wire [3:0] btn;
 
 reg [7:0] addr = 8'h00;
 
 //Beep bp(clk, 32'd56818, ~btn[0], beep);
 LED7Seg led7(clk, seg, segsel, {8'h00, addr});
 
-always @(posedge btn[0], posedge btn[1]) begin
-	case(btn[1:0]) 
-		2'b01:   addr = addr + 1;
-		2'b10:   addr = addr - 1;
-		default: addr = addr;	 
-	endcase
+defparam rmchat0.PortWidth = 4;
+RemoveChattering rmchat0(clk, ~nbtn, btn);
+
+always @(posedge btn[0]) begin
+	addr = addr + 1;
 end
 
 endmodule

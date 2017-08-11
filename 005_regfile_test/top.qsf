@@ -44,6 +44,7 @@ set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
 set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name SOURCE_FILE top.v
+set_global_assignment -name SOURCE_FILE rmchat.v
 
 set_location_assignment PIN_25 -to reset
 set_location_assignment PIN_23 -to clk
