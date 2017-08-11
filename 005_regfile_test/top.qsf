@@ -45,14 +45,15 @@ set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name SOURCE_FILE top.v
 set_global_assignment -name SOURCE_FILE rmchat.v
+set_global_assignment -name SOURCE_FILE btnlatch.v
 
 set_location_assignment PIN_25 -to reset
 set_location_assignment PIN_23 -to clk
 
-set_location_assignment PIN_87 -to led[0]
-set_location_assignment PIN_86 -to led[1]
-set_location_assignment PIN_85 -to led[2]
-set_location_assignment PIN_84 -to led[3]
+set_location_assignment PIN_87 -to nled[0]
+set_location_assignment PIN_86 -to nled[1]
+set_location_assignment PIN_85 -to nled[2]
+set_location_assignment PIN_84 -to nled[3]
 
 set_location_assignment PIN_88 -to nbtn[0]
 set_location_assignment PIN_89 -to nbtn[1]

@@ -1,4 +1,4 @@
-SRCS=beep.v led7seg.v rmchat.v top.v
+SRCS=beep.v led7seg.v rmchat.v btnlatch.v top.v
 TOPMODULE=top
 
 DIR_QBIN=~/intelFPGA_lite/17.0/quartus/bin
