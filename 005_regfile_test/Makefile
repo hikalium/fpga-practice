@@ -35,3 +35,6 @@ clean:
 	-rm *.out
 	-rm *.sld
 	-rm *.sof
+
+log:
+	-cat $(TOPMODULE).map.summary
