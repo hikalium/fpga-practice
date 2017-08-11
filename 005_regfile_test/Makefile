@@ -23,5 +23,5 @@ install:
 	$(DIR_QBIN)/quartus_pgm -c 1 -m jtag -o P\;$(TOPMODULE).sof@1
 
 resetpgm:
-	killall jtagd
+	-killall jtagd
 	sudo $(DIR_QBIN)/jtagd

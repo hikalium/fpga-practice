@@ -13,7 +13,7 @@ wire [3:0] btn = ~nbtn;
 
 reg [7:0] addr = 8'h00;
 
-Beep bp(clk, 32'd56818, ~btn[0], beep);
+//Beep bp(clk, 32'd56818, ~btn[0], beep);
 LED7Seg led7(clk, seg, segsel, {8'h00, addr});
 
 always @(posedge btn[0], posedge btn[1]) begin
