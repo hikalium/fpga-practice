@@ -21,7 +21,7 @@ wire [7:0] memdata = mem[addr];
 reg [7:0] mem [255:0];
 
 initial begin
-	$readmemh("ram.hex", mem);
+	$readmemh("ram.txt", mem);
 end
 
 always @(posedge clk) begin
